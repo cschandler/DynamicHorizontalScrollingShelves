@@ -27,8 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     private func setupCollectioView() {
-        let nib = UINib(nibName: "ExampleCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "ExampleCell")
+        let nib = UINib(nibName: Constants.exampleCellReuseIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: Constants.exampleCellReuseIdentifier)
         
         let edgeInsets = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
         flowLayout.sectionInset = edgeInsets
@@ -57,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath) as! ExampleCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.exampleCellReuseIdentifier, for: indexPath) as! ExampleCell
         let example = data[indexPath.item]
         let viewModel = ExampleViewModel(example: example)
         
