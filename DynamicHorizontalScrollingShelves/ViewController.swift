@@ -33,14 +33,21 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let edgeInsets = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
         flowLayout.sectionInset = edgeInsets
         
-        let height = Constants.maximumCardHeight - edgeInsets.top - edgeInsets.bottom
-        flowLayout.itemSize = CGSize(width: Constants.cardWidth, height: height)
-        
         setCollectionViewHeight(Constants.maximumCardHeight, with: flowLayout.sectionInset)
     }
     
     private func setCollectionViewHeight(_ value: CGFloat, with edgeInsets: UIEdgeInsets) {
-        collectionViewHeightConstraint.constant = Constants.maximumCardHeight + edgeInsets.top + edgeInsets.bottom
+        let viewModels = data.flatMap { ExampleViewModel(example: $0) }
+        
+        guard let viewModel = calculateHeight(with: viewModels, forWidth: Constants.cardWidth) else {
+            return
+        }
+        
+        let height = ExampleCell.height(for: viewModel, forWidth: Constants.cardWidth)
+        
+        flowLayout.itemSize = CGSize(width: Constants.cardWidth, height: height)
+        
+        collectionViewHeightConstraint.constant = height + edgeInsets.top + edgeInsets.bottom
     }
     
     // MARK: - UICollectionViewDatasource
@@ -75,8 +82,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             data = ExampleData.dataSet3
         }
         
-        collectionView.reloadData()
         setCollectionViewHeight(Constants.maximumCardHeight, with: flowLayout.sectionInset)
+        
+        collectionView.reloadData()
     }
     
 }

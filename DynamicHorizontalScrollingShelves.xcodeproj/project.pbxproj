@@ -18,6 +18,7 @@
 		089A6A6C203B1FA50028525F /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A6A6B203B1FA50028525F /* ExampleViewModel.swift */; };
 		089A6A6E203B208B0028525F /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A6A6D203B208B0028525F /* ExampleData.swift */; };
 		089A6A70203B252A0028525F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A6A6F203B252A0028525F /* Constants.swift */; };
+		089A6A72203B36F50028525F /* DynamicHeightCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A6A71203B36F50028525F /* DynamicHeightCalculable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		089A6A6B203B1FA50028525F /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		089A6A6D203B208B0028525F /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		089A6A6F203B252A0028525F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		089A6A71203B36F50028525F /* DynamicHeightCalculable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCalculable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				089A6A6B203B1FA50028525F /* ExampleViewModel.swift */,
 				089A6A6D203B208B0028525F /* ExampleData.swift */,
 				089A6A6F203B252A0028525F /* Constants.swift */,
+				089A6A71203B36F50028525F /* DynamicHeightCalculable.swift */,
 			);
 			path = DynamicHorizontalScrollingShelves;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				089A6A68203B1CEC0028525F /* ExampleCell.swift in Sources */,
 				089A6A70203B252A0028525F /* Constants.swift in Sources */,
 				089A6A56203B1C4A0028525F /* ViewController.swift in Sources */,
+				089A6A72203B36F50028525F /* DynamicHeightCalculable.swift in Sources */,
 				089A6A54203B1C4A0028525F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
