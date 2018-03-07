@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     private func setCollectionViewHeight(with data: [ExampleModel], edgeInsets: UIEdgeInsets) {
         let viewModels = data.flatMap { ExampleViewModel(example: $0) }
         
-        guard let viewModel = calculateHeight(with: viewModels, forWidth: Constants.cardWidth) else {
+        guard let viewModel = calculateHeighest(with: viewModels, forWidth: Constants.cardWidth) else {
             return
         }
         

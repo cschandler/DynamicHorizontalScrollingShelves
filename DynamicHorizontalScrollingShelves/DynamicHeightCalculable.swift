@@ -12,7 +12,7 @@ protocol DynamicHeightCalculable {
     func height(forWidth: CGFloat) -> CGFloat
 }
 
-func calculateHeight<T: DynamicHeightCalculable>(with viewModels: [T], forWidth width: CGFloat) -> T? {
+func calculateHeighest<T: DynamicHeightCalculable>(with viewModels: [T], forWidth width: CGFloat) -> T? {
     var largestViewModel = viewModels.first
     var largestHeight: CGFloat = 0
     
